@@ -43,27 +43,35 @@ The computed image metrics serve as non-invasive proxies for optical density.
 ```
 rpm-microgravity-growth-analysis/
 │
-├── well_turbidity_analysis.ipynb   # Main Jupyter notebook (analysis pipeline)
-├── Earth/                          # Images from Earth gravity experiment
-├── Mars/                           # Images from Mars (simulated microgravity) experiment
-└── README.md                       # Project documentation
+├── well_turbidity_analysis.ipynb   # Main analysis notebook
+├── Earth/                          # Earth gravity images
+├── Mars/                           # Mars gravity images
+├── scripts/                        # Utility scripts
+│   └── rename_by_exif.ps1          # PowerShell rename script
+├── LICENSE
+└── README.md
 ```
 
 ### Folder Description
 
 - **well_turbidity_analysis.ipynb**  
   Contains the full turbidity analysis pipeline:
-  well detection, cropping, metric computation, and row-wise aggregation.
+  well detection, cropping, metric computation, fallback detection, and row-wise aggregation.
 
 - **Earth/**  
   Contains plate images from the Earth gravity control experiment.
 
 - **Mars/**  
-  Contains plate images from the Mars / simulated microgravity experiment.
+  Contains plate images from the Mars simulated microgravity experiment.
+
+- **scripts/**  
+  Contains utility scripts used for preprocessing tasks, such as renaming raw images based on EXIF timestamps.
+
+- **LICENSE**  
+  Contains the open-source license governing the use, modification, and distribution of this project.
 
 - **README.md**  
-  Documentation describing the project, usage, configuration, and output interpretation.
-
+  Documentation describing the project, usage instructions, configuration parameters, and output interpretation.
 
 ---
 
